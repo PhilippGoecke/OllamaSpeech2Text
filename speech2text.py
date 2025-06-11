@@ -23,7 +23,7 @@ def record_audio(filename, duration=5, fs=16000):
 def transcribe_audio_with_ollama(audio_path):
     with open(audio_path, "rb") as f:
         audio_bytes = f.read()
-    files = {'audio': (audio_path, audio_bytes, 'audio/wav')}
+    files = {'audio_file': (audio_path, audio_bytes, 'audio/wav')}
     response = requests.post(WHISPER_URL, files=files)
     if response.status_code == 200:
         transcript = response.json().get("text", "")
