@@ -5,4 +5,5 @@ apt install python3-virtualenv
 python3 -m venv .
 source bin/activate
 
-python3 -m pip install sounddevice --user
+apt install portaudio19-dev
+python3 -m pip install sounddevice numpy
