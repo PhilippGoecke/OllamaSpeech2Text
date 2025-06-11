@@ -1,7 +1,5 @@
-# OllamaSpeech2Text
-Ollama Speech2Text
-
-WIP!!!  
+# WhisperSpeech2Text
+Whisper Speech2Text
 
 apt install python3-virtualenv  
 python3 -m venv .  
