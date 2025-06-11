@@ -8,6 +8,6 @@ python3 -m venv .
 source bin/activate  
 
 apt install ffmpeg portaudio19-dev  
-python3 -m pip install sounddevice  
+python3 -m pip install sounddevice whisper  
 
 python3 speech2text.py  
