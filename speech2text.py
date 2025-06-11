@@ -16,7 +16,7 @@ def record_audio(filename, duration=5, fs=16000):
 
 # This function transcribes the recorded audio using Whisper
 def transcribe_audio(audio_path):
-    model = whisper.load("turbo")
+    model = whisper.load_model("base")
     result = model.transcribe(audio_path, language="de", task="transcribe")
     return result["text"]
 
