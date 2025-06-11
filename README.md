@@ -3,7 +3,7 @@ Whisper Speech2Text
 
 https://github.com/openai/whisper
 
-apt install python3-virtualenv python3-pip  
+apt install python3-virtualenv python3.11-venv python3-pip  
 python3 -m venv .  
 source bin/activate  
 
