@@ -23,6 +23,10 @@ def transcribe_audio(audio_path):
 # Main function to record audio and transcribe it
 if __name__ == "__main__":
     audio_file = "speech.wav"
-    record_audio(audio_file, duration=5)
+    should_record = input("Do you want to record audio? (y/n): ").strip().lower()
+    if should_record == "y":
+        record_audio(audio_file, duration=5)
+    else:
+        print(f"Using existing audio file: {audio_file}")
     transcript = transcribe_audio(audio_file)
     print("Transcript:", transcript)
