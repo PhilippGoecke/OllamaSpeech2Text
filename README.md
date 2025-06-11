@@ -8,4 +8,9 @@ source bin/activate
 apt install portaudio19-dev  
 python3 -m pip install sounddevice numpy requests  
 
+https://github.com/ahmetoner/whisper-asr-webservice
+docker run -d --gpus all -p 9000:9000 --name whisper-api ghcr.io/ahmetoner/whisper-asr-webservice:latest
+docker run -d --gpus all -p 9000:9000 -e ASR_MODEL=base -e ASR_ENGINE=openai_whisper onerahmet/openai-whisper-asr-webservice:latest-gpu
+docker run -d -p 9000:9000 -e ASR_MODEL=base -e ASR_ENGINE=openai_whisper onerahmet/openai-whisper-asr-webservice:latest
+
 python3 speech2text.py  
