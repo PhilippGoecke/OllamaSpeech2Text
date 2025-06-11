@@ -1,7 +1,6 @@
 import whisper
 import sounddevice as sd
 import wave
-#import numpy as np
 
 # This script records audio from the microphone
 def record_audio(filename, duration=5, fs=16000):
@@ -17,7 +16,7 @@ def record_audio(filename, duration=5, fs=16000):
 
 # This function transcribes the recorded audio using Whisper
 def transcribe_audio(audio_path):
-    model = whisper.load_model("turbo")
+    model = whisper.load("turbo")
     result = model.transcribe(audio_path, language="de", task="transcribe")
     return result["text"]
 
