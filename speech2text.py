@@ -6,7 +6,7 @@ import json
 
 # Configuration
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
-OLLAMA_MODEL = "llama2"  # Change to your installed model
+OLLAMA_MODEL = "qwen3:8b"
 
 def record_audio(filename, duration=5, fs=16000):
     print("Recording...")
